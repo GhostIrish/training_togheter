@@ -24,3 +24,19 @@ d3 = datetime.strptime(date_string, "%d/%m/%Y %H:%M")
 print(d3)
 # também é possivel pegar uma data ou um datetime.now e converter 
 # ele para algum formato que vocÇe desejar
+
+# utilizando o pytz para trabalhar com fuso horario
+
+import pytz
+
+# criando datetime com timezone
+
+br_time = datetime.now(pytz.timezone("America/Sao_Paulo")) 
+# os codigos de timezone estão presentes na documentação da lib
+eu_time = datetime.now(pytz.timezone("Europe/Oslo")) 
+
+print(br_time)
+print()
+print(eu_time)
+
+# da pra fazer sem o pytz, mas é muito mais verboso e desnecessário.
