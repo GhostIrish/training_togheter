@@ -16,8 +16,7 @@ class Pug(Cachorro):
 class Pitbull(Cachorro):
     def latido(self):
         print(f'O pitbull {self.nome} ta bolado.')
-        
-        
+       
 c = Pug('Bruto', 'marrom')
 
 p = Pitbull('Rex', 'marrom')
