@@ -1,6 +1,5 @@
 class Cachorro():
     def __init__(self, nome, cor, acordado=True):
-        print('Dando inicio a classe')
         self.nome = nome
         self.cor = cor
         self.acordado = acordado
@@ -8,6 +7,21 @@ class Cachorro():
     def latir(self):
         print(f'O cachorro {self.nome} está latindo')
     
-c = Cachorro('Pug', 'marrom')
+class Pug(Cachorro):
+    def dormir(self):
+        self.acordado = False
+        print(f'O cachorro pug {self.nome} agora está dormindo.')
 
-c.latir()
+class Pitbull(Cachorro):
+    def latido(self):
+        print(f'O pitbull {self.nome} ta bolado.')
+        
+        
+c = Pug('Bruto', 'marrom')
+
+p = Pitbull('Rex', 'marrom')
+
+c.dormir()
+
+print()
+p.latido()
