@@ -10,6 +10,7 @@ class Cachorro():
 class Pug(Cachorro):
     def dormir(self):
         self.acordado = False
+        print(self.acordado)
         print(f'O cachorro pug {self.nome} agora está dormindo.')
 
 class Pitbull(Cachorro):
