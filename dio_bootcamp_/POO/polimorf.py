@@ -21,7 +21,7 @@ plano_d_voo(Papagaio())
 plano_d_voo(Pato())
 # basicamente pelo oq entendi ao chamar plano de voo, ele vai chamar o metodo voar de acordo 
 # com o objeto que foi passado, tipo, quando voce chama plano_d_voo da classe, ele aciona o voar
-# de acordo com a classe.
+# de acordo com a classe.,
 
 # por exemplo, a classe passaro tem o método voar, mas a classe papagaio e 
 # pato tem suas próprias definições de voar, então ao chamar plano de voo, 
