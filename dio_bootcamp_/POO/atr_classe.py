@@ -14,6 +14,8 @@ class Estudante:
 gui = Estudante('Gui', 165413)
 gi = Estudante('Gi', 165789)
 
+# Estudante.escola = 'Nova escola'
+
 print(gui)
 print()
 print(gi)
