@@ -1,32 +1,23 @@
-# exercicio basicamente consiste em fazer um verificador de senha que atinga os seguintes critérios:
-# - seis digitos de caracteres
-# - pelo menos um lowercase
-# - pelo menos um uppercase
-# - contenha pelo menos um digito
-# - somente alphanumericos
+# ex 01: Crie um programa que solicite uma frase ao usuário e conte o número de palavras, letras e espaços na frase. 
 
-def verificador_senhas(senha):
-    if len(senha) < 6:
-        print('Senha inválida, a senha deve conter pelo menos 6 digitos')
-    
-    for letter in senha:
-        if letter.islower():
-            break
-        else:
-            print('Senha inválida, a senha deve conter pelo menos um caractere minusculo(lowercase)')
-            
-    for letter in senha:
-        if letter.isupper():
-            break
-        else:
-            print('Senha inválida, a senha deve conter pelo menos um caractere maiusculo(uppercase)')
+def verifica_string(string: str):
+    string = string.strip().upper()
+    palavras = 0
+    letras = 0
+    espaco = 0
+    separando = string.split()
+    for letra in string:
+        if letra in ' ':
+            espaco += 1
+        if letra in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+            letras += 1
+    for palavra in separando:
+        if len(palavra) > 1:
+            palavras += 1
 
-    for letter in senha:
-        if letter.isnumeric():
-            break
-        else:
-            print('Senha inválida, a senha deve conter pelo menos um numero')
+    return f'A frase "{string.capitalize()}", tem um total de {palavras} palavras, {letras} letras e {espaco} espaços.'
 
-    for letter in senha:
-        if letter.isalnum():
-            print('Senha inválida, não pode conter caracteres alfanumericos')
+frase = str(input('Digite uma frase: '))
+
+
+print(verifica_string(frase))
